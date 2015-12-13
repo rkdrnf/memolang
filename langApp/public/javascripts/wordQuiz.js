@@ -179,7 +179,7 @@ $(function() {
 	function ShowEnd() {
 		$('#quizBox #text').text('끝');
 		$('#quizBox #endMessage').text('총 ' + wordsCount + '개 중에 ' + correctCount + '개 맞았습니다.');
-		$('#quizBox #answerRate').html('정답률은 <b>' + (correctCount / wordsCount * 100).toFixed(2) + '%</b> 입니다.');
+		$('#quizBox #answerRate').html('정답률은 <b>' + (wordsCount === 0 ? 0 : (correctCount / wordsCount * 100)).toFixed(2) + '%</b> 입니다.');
 		$('#quizBox #endBox').show();
 		$('#quizBox #answerBox').hide();
 		$('#quizBox #preference #Watch').hide();
