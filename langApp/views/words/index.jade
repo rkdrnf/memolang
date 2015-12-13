@@ -1,0 +1,29 @@
+extends ../layout
+
+block content
+	form(role='form', action='/words/deleteAll', method='post')
+		button.btn.btn-danger(type='submit') DeleteAll
+		
+	ul
+	each word in words
+		li
+			form(role='form', action='/words/delete', method='post')
+				input(type='hidden', name='_id', value=word._id)
+				span= word._id
+				br
+				span= word.text
+				br
+				span= word.meaning
+				br
+				span= word.desc
+				br
+				span= word.level
+				br
+				span= word.globalLevel
+				br
+				span= word.watchings
+				br
+				span= word.ignores
+				button.btn.btn-default(type='submit') Delete
+					
+					

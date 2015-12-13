@@ -1,0 +1,44 @@
+extends layout
+
+block append head
+	script(src='/javascripts/registerWord.js')
+	script(src='/javascripts/wordQuiz.js')
+	
+block content
+	nav.navbar.navbar-inverse.navbar-fixed-top
+		.container
+			.navbar-header
+				button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false')
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				span.navbar-brand MemoLang
+				
+			#navbar.navbar-collapse.collapse
+				if (!user)
+					form.navbar-form.navbar-right(role='form', action='/login', method='post')
+						.form-group
+							input.form-control(type='text', name='username', placeholder='Enter Your ID')
+						&nbsp;
+						.form-group
+							input.form-control(type='password', name='password', placeholder='Password')
+						&nbsp;
+						button.btn.btn-success(type='submit') Sign in
+						&nbsp;
+						a.btn.btn-success(href="/register") Register
+				if (user) 
+					.navbar-nav.navbar-right
+						a(href="#") #{user.username}
+						&nbsp;
+						a.btn.btn-success(href="/logout") Log out
+					
+		//-container
+	//-nav	
+	
+	.jumbotron
+		.container
+			include wordQuiz.jade
+			
+	.container
+		include registerWord.jade

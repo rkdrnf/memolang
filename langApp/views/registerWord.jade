@@ -1,0 +1,12 @@
+
+#regWordBox
+	form#regCharForm.center-block(role='form', action='/words/register', method='post', style='max-width: 150px')
+		.form-group
+			input#text.form-control(type='text', name='text', placeholder='汉语, 한자 입력')
+		.form-group
+			input#meaning.form-control(type='text', name='meaning', placeholder='뜻')
+		.form-group
+			textarea#desc.form-control(type='text', name='desc', rows='4', placeholder='부가 설명')
+		button#submitButton.btn.btn-primary(type='submit') 새 단어
+
+	

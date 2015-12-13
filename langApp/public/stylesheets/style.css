@@ -1,0 +1,15 @@
+.jumbotron
+{
+	text-align: center;
+	padding-top: 52px;
+}
+
+#quizBox #text
+{
+	font-size: 15em;
+}
+
+#regWordBox
+{
+	text-align: center;
+}

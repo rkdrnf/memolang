@@ -1,0 +1,36 @@
+#quizBox
+	.row
+		#quizType.col-xs-5.text-left
+			select.form-control
+				option(value='All') 모두
+				option(value='My') 내 단어
+				option(value='Watching') 하트단어
+				option(value='Abandoned') 제외단어
+	
+		#preference.col-xs-7.text-right
+			button#Watch.btn.btn-link.btn-lg(aria-label='Watch')
+				span.glyphicon.glyphicon-heart-empty(aria-hidden='true')
+			button#Unwatch.btn.btn-link.btn-lg(aria-label='Unwatch')
+				span.glyphicon.glyphicon-heart(aria-hidden='true')
+			button#Ignore.btn.btn-link.btn-lg(aria-label='Ignore')
+				span.glyphicon.glyphicon-trash(aria-hidden='true')
+			button#Add.btn.btn-link.btn-lg(aria-label='Add')
+				span.glyphicon.glyphicon-plus(aria-hidden='true')
+			
+	h1#text
+	
+	#meaningBox
+		p#meaning.lead
+		p#desc
+		#nextBox.row
+			button#next.btn.btn-primary.col-xs-offset-2.col-xs-8.input-lg(type='button') 넘어가기
+			
+	#answerBox.row
+		button#know.btn.btn-success.col-xs-offset-2.col-xs-3.input-lg(type='button') 알아요
+		button#wrong.btn.btn-warning.col-xs-offset-2.col-xs-3.input-lg(type='button') 몰라요
+		
+	#endBox
+		p#endMessage
+		p#answerRate
+		.row
+			button#restart.btn.btn-info.col-xs-offset-2.col-xs-8.input-lg(type='button') 새로 시작

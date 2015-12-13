@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+	ul
+	each word in words
+		li
+			form(role='form', action='/globalWordLevels/delete', method='post')
+				input(type='hidden', name='_id', value=word._id)
+				span= word.word
+				br
+				span= word.level
+				br
+				span= word.triedNumber
+				br
+				span= word.matchedNumber
+				button.btn.btn-default(type='submit') Delete
+					
+					
