@@ -122,13 +122,13 @@
 词典	cí diǎn	ci2 dian3	"dictionary (of Chinese compound words); also written 辭典|辞典[ci2 dian3]; CL:部[bu4],本[ben3]"
 词语	cí yǔ	ci2 yu3	word (general term including monosyllables through to short phrases); term (e.g. technical term); expression
 次	cì	ci4	"next in sequence; second; the second (day, time etc); secondary; vice-; sub-; infra-; inferior quality; substandard; order; sequence; hypo- (chemistry); classifier for enumerated events: time"
-聪明	cōng ming5	cong1 ming5	acute (of sight and hearing); clever; intelligent; bright; smart
+聪明	cōng ming	cong1 ming5	acute (of sight and hearing); clever; intelligent; bright; smart
 从	cóng	cong2	"from; via; passing through; through (a gap); past; ever (followed by negative, meaning never); (formerly pr. zong4 and related to 縱|纵) to follow; to comply with; to obey; to join; to engage in; adopting some mode of action or attitude; follower; retainer; accessory; accomplice; related by common paternal grandfather or earlier ancestor; surname Cong"
 从来	cóng lái	cong2 lai2	always; at all times; never (if used in negative sentence)
 粗心	cū xīn	cu1 xin1	careless; thoughtless
 错	cuò	cuo4	mistake; error; blunder; fault; cross; uneven; wrong; CL:個|个[ge4]
 答案	dá àn	da2 an4	answer; solution; CL:個|个[ge4]
-打扮	dǎ ban5	da3 ban5	to decorate; to dress; to make up; to adorn; manner of dressing; style of dress
+打扮	dǎ ban	da3 ban5	to decorate; to dress; to make up; to adorn; manner of dressing; style of dress
 打电话	dǎ diàn huà	da3 dian4 hua4	to make a telephone call
 打篮球	dǎ lán qiú	da3 lan2 qiu2	play basketball
 打扰	dǎ rǎo	da3 rao3	to disturb; to bother; to trouble
@@ -266,7 +266,7 @@
 感谢	gǎn xiè	gan3 xie4	(express) thanks; gratitude; grateful; thankful; thanks
 干	gān	gan1	to work; to do; to manage
 刚才	gāng cái	gang1 cai2	just now; a moment ago
-刚刚	gāng gang5	gang1 gang5	just recently; just a moment ago
+刚刚	gāng gang	gang1 gang5	just recently; just a moment ago
 高	gāo	gao1	high; tall; above average; loud; your (honorific); surname Gao
 高级	gāo jí	gao1 ji2	high level; high grade; advanced; high-ranking
 高兴	gāo xìng	gao1 xing4	happy; glad; willing (to do sth); in a cheerful mood
@@ -350,7 +350,7 @@
 厚	hòu	hou4	thick; deep or profound; kind; generous; rich or strong in flavor; to favor; to stress
 后悔	hòu huǐ	hou4 hui3	to regret; to repent
 后来	hòu lái	hou4 lai2	afterwards; later
-后面	hòu mian5	hou4 mian5	rear; back; behind; later; afterwards
+后面	hòu mian	hou4 mian5	rear; back; behind; later; afterwards
 忽然	hū rán	hu1 ran2	suddenly; all of a sudden
 护士	hù shi	hu4 shi5	nurse; CL:個|个[ge4]
 护照	hù zhào	hu4 zhao4	"passport; CL:本[ben3],個|个[ge4]"
@@ -454,65 +454,65 @@
 经过	jīng guò	jing1 guo4	to pass; to go through; process; course; CL:個|个[ge4]
 经济	jīng jì	jing1 ji4	economy; economic
 经理	jīng lǐ	jing1 li3	"manager; director; CL:個|个[ge4],位[wei4],名[ming2]"
-经历	jīng lì	jing1 li4	"experience; CL:個|个[ge4],次[ci4]; to experience; to go through"
-经验	jīng yàn	jing1 yan4	to experience; experience
 京剧	jīng jù	Jing1 ju4	"Beijing opera; CL:場|场[chang3],出[chu1]"
+经历	jīng lì	jing1 li4	"experience; CL:個|个[ge4],次[ci4]; to experience; to go through"
 警察	jǐng chá	jing3 cha2	police; policeman; policewoman; CL:個|个[ge4]
 竟然	jìng rán	jing4 ran2	unexpectedly; to one's surprise; in spite of everything; in that crazy way; actually; to go as far as to
+经验	jīng yàn	jing1 yan4	to experience; experience
 竞争	jìng zhēng	jing4 zheng1	to compete; competition
-镜子	jìng zi	jing4 zi5	"mirror; CL:面[mian4],個|个[ge4]"
-究竟	jiū jìng	jiu1 jing4	after all (when all is said and done); actually; outcome; result
 九	jiǔ	jiu3	nine; 9
 久	jiǔ	jiu3	(long) time; (long) duration of time
+究竟	jiū jìng	jiu1 jing4	after all (when all is said and done); actually; outcome; result
+镜子	jìng zi	jing4 zi5	"mirror; CL:面[mian4],個|个[ge4]"
 旧	jiù	jiu4	old; opposite: new 新; former; worn (with age)
-就	jiù	jiu4	at once; right away; only; just (emphasis); as early as; already; as soon as; then; in that case; as many as; even if; to approach; to move towards; to undertake; to engage in; to suffer; subjected to; to accomplish; to take advantage of; to go with (of foods); with regard to; concerning
 举办	jǔ bàn	ju3 ban4	to conduct; to hold
-举行	jǔ xíng	ju3 xing2	"to hold (a meeting, ceremony etc)"
 拒绝	jù jué	ju4 jue2	to refuse; to decline; to reject
 距离	jù lí	ju4 li2	distance; to be apart; CL:個|个[ge4]
-句子	jù zi	ju4 zi5	sentence; CL:個|个[ge4]
+就	jiù	jiu4	at once; right away; only; just (emphasis); as early as; already; as soon as; then; in that case; as many as; even if; to approach; to move towards; to undertake; to engage in; to suffer; subjected to; to accomplish; to take advantage of; to go with (of foods); with regard to; concerning
+举行	jǔ xíng	ju3 xing2	"to hold (a meeting, ceremony etc)"
 觉得	jué de	jue2 de5	to think; to feel
-决定	jué dìng	jue2 ding4	"to decide (to do something); to resolve; decision; CL:個|个[ge4],項|项[xiang4]; certainly"
-咖啡	kā fēi	ka1 fei1	coffee; CL:杯[bei1]
 开	kāi	kai1	to open; to start; to turn on; to boil; to write out (a medical prescription); to operate (vehicle); abbr. for 開爾文|开尔文 degrees Kelvin
-开始	kāi shǐ	kai1 shi3	to begin; beginning; to start; initial; CL:個|个[ge4]
-开玩笑	kāi wán xiào	kai1 wan2 xiao4	to play a joke; to make fun of; to joke
-看	kàn	kan4	to see; to look at; to read; to watch; to consider; to regard as; to view as; to treat as; to judge; (after repeated verb) to give it a try; depending on (how you're judging); to visit; to call on; to treat (an illness); to look after; Watch out! (for a danger)
-看法	kàn fǎ	kan4 fa3	way of looking at a thing; view; opinion; CL:個|个[ge4]
+咖啡	kā fēi	ka1 fei1	coffee; CL:杯[bei1]
+句子	jù zi	ju4 zi5	sentence; CL:個|个[ge4]
+决定	jué dìng	jue2 ding4	"to decide (to do something); to resolve; decision; CL:個|个[ge4],項|项[xiang4]; certainly"
 看见	kàn jiàn	kan4 jian4	to see; to catch sight of
-考虑	kǎo lv4	kao3 lv4	to think over; to consider; consideration
+开玩笑	kāi wán xiào	kai1 wan2 xiao4	to play a joke; to make fun of; to joke
+看法	kàn fǎ	kan4 fa3	way of looking at a thing; view; opinion; CL:個|个[ge4]
 考试	kǎo shì	kao3 shi4	exam; CL:次[ci4]
-棵	kē	ke1	"classifier for trees, cabbages, plants etc"
-科学	kē xué	ke1 xue2	"science; scientific knowledge; scientific; CL:門|门[men2],個|个[ge4],種|种[zhong3]"
+看	kàn	kan4	to see; to look at; to read; to watch; to consider; to regard as; to view as; to treat as; to judge; (after repeated verb) to give it a try; depending on (how you're judging); to visit; to call on; to treat (an illness); to look after; Watch out! (for a danger)
+开始	kāi shǐ	kai1 shi3	to begin; beginning; to start; initial; CL:個|个[ge4]
 咳嗽	ké sou	ke2 sou5	to cough; CL:陣|阵[zhen4]
-渴	kě	ke3	thirsty
+科学	kē xué	ke1 xue2	"science; scientific knowledge; scientific; CL:門|门[men2],個|个[ge4],種|种[zhong3]"
 可爱	kě ài	ke3 ai4	amiable; cute; lovely
-可怜	kě lián	ke3 lian2	pitiful; pathetic
-可能	kě néng	ke3 neng2	might (happen); possible; probable; possibility; probability; maybe; perhaps; CL:個|个[ge4]
+棵	kē	ke1	"classifier for trees, cabbages, plants etc"
 可是	kě shì	ke3 shi4	but; however
-可惜	kě xī	ke3 xi1	it is a pity; what a pity; (it's) too bad
+考虑	kǎo lv4	kao3 lv4	to think over; to consider; consideration
 可以	kě yǐ	ke3 yi3	can; may; possible; able to
-刻	kè	ke4	quarter (hour); moment; to carve; to engrave; to cut; oppressive; classifier for short time intervals
-课	kè	ke4	"subject; course; class; lesson; CL:堂[tang2],节|節[jie2],門|门[men2]"
+可能	kě néng	ke3 neng2	might (happen); possible; probable; possibility; probability; maybe; perhaps; CL:個|个[ge4]
 客人	kè rén	ke4 ren2	visitor; guest; customer; client; CL:位[wei4]
-肯定	kěn dìng	ken3 ding4	to be sure; to be certain; sure; certain; definite; to confirm; to affirm; affirmative
 空气	kōng qì	kong1 qi4	air; atmosphere
-空调	kōng tiáo	kong1 tiao2	air conditioning
-恐怕	kǒng pà	kong3 pa4	fear; to dread; I'm afraid that...; perhaps; maybe
+可怜	kě lián	ke3 lian2	pitiful; pathetic
+课	kè	ke4	"subject; course; class; lesson; CL:堂[tang2],节|節[jie2],門|门[men2]"
+渴	kě	ke3	thirsty
 口	kǒu	kou3	"mouth; classifier for things with mouths (people, domestic animals, cannons, wells etc)"
-哭	kū	ku1	to cry; to weep
 苦	kǔ	ku3	bitter; hardship; pain; to suffer; painstaking
-裤子	kù zi	ku4 zi5	trousers; pants; CL:條|条[tiao2]
-块	kuài	kuai4	"lump (of earth); chunk; piece; classifier for pieces of cloth, cake, soap etc; colloquial word for yuan (or other unit of currency such as Hong Kong or US dollar etc), usually as 塊錢|块钱"
+恐怕	kǒng pà	kong3 pa4	fear; to dread; I'm afraid that...; perhaps; maybe
+刻	kè	ke4	quarter (hour); moment; to carve; to engrave; to cut; oppressive; classifier for short time intervals
 快	kuài	kuai4	rapid; quick; speed; rate; soon; almost; to make haste; clever; sharp (of knives or wits); forthright; plain-spoken; gratified; pleased; pleasant
-快乐	kuài lè	kuai4 le4	happy; merry
+可惜	kě xī	ke3 xi1	it is a pity; what a pity; (it's) too bad
 筷子	kuài zi	kuai4 zi5	"chopsticks; CL:對|对[dui4],根[gen1],把[ba3],雙|双[shuang1]"
-宽	kuān	kuan1	lenient; wide; broad
-困	kùn	kun4	to trap; to surround; hard-pressed; stranded; destitute
-困难	kùn nan5	kun4 nan5	(financial etc) difficulty; problem; issue; CL:個|个[ge4]
-扩大	kuò dà	kuo4 da4	to expand; to enlarge; to broaden one's scope
 拉	lā	la1	to pull; to play (string instruments); to drag; to draw
+困难	kùn nan	kun4 nan5	(financial etc) difficulty; problem; issue; CL:個|个[ge4]
+空调	kōng tiáo	kong1 tiao2	air conditioning
+肯定	kěn dìng	ken3 ding4	to be sure; to be certain; sure; certain; definite; to confirm; to affirm; affirmative
+块	kuài	kuai4	"lump (of earth); chunk; piece; classifier for pieces of cloth, cake, soap etc; colloquial word for yuan (or other unit of currency such as Hong Kong or US dollar etc), usually as 塊錢|块钱"
+裤子	kù zi	ku4 zi5	trousers; pants; CL:條|条[tiao2]
+哭	kū	ku1	to cry; to weep
+困	kùn	kun4	to trap; to surround; hard-pressed; stranded; destitute
+宽	kuān	kuan1	lenient; wide; broad
+快乐	kuài lè	kuai4 le4	happy; merry
 垃圾桶	lā jī tǒng	la1 ji1 tong3	rubbish bin
+扩大	kuò dà	kuo4 da4	to expand; to enlarge; to broaden one's scope
 辣	là	la4	hot (spicy); pungent
 来	lái	lai2	to come; to arrive; to come round; ever since; next
 来不及	lái bu jí	lai2 bu5 ji2	there's not enough time (to do sth); it's too late (to do sth)
@@ -565,7 +565,7 @@
 旅游	lv3 yóu	lv3 you2	trip; journey; tourism; travel; tour
 六	liù	liu4	six; 6
 马	mǎ	ma3	horse; abbr. for Malaysia 馬來西亞|马来西亚
-麻烦	má fan5	ma2 fan5	inconvenient; troublesome; to trouble or bother sb; to put sb to trouble
+麻烦	má fan	ma2 fan5	inconvenient; troublesome; to trouble or bother sb; to put sb to trouble
 妈妈	mā ma	ma1 ma5	"mama; mommy; mother; CL:個|个[ge4],位[wei4]"
 律师	lv4 shī	lv4 shi1	lawyer
 绿	lv4	lv4	green
@@ -602,9 +602,9 @@
 目的	mù dì	mu4 di4	purpose; aim; goal; target; objective; CL:個|个[ge4]
 拿	ná	na2	to hold; to seize; to catch; to apprehend; to take
 哪	nǎ	na3	how; which
-哪儿	nǎ r5	na3 r5	where?; wherever; anywhere
+哪儿	nǎ r	na3 r5	where?; wherever; anywhere
 那	nà	na4	"that; those; then (in that case); commonly pr. nei4 before a classifier, esp. in Beijing"
-那儿	nà r5	na4 r5	there
+那儿	nà r	na4 r5	there
 奶奶	nǎi nai	nai3 nai5	(informal) father's mother; paternal grandmother; CL:位[wei4]
 耐心	nài xīn	nai4 xin1	patient (adjective)
 南	nán	nan2	south
@@ -650,7 +650,7 @@
 便宜	pián yi	pian2 yi5	small advantages; to let sb off lightly; cheap; inexpensive
 骗	piàn	pian4	to cheat; to swindle; to deceive; to fool; to hoodwink; to trick
 票	piào	piao4	ticket; ballot; bank note; CL:張|张[zhang1]; person held for ransom; amateur performance of Chinese opera; classifier for shipments and business transactions (topolect)
-漂亮	piào liang5	piao4 liang5	pretty; beautiful
+漂亮	piào liang	piao4 liang5	pretty; beautiful
 乒乓球	pīng pāng qiú	ping1 pang1 qiu2	table tennis; ping-pong; ping pong; table tennis ball; CL:個|个[ge4]
 苹果	píng guǒ	ping2 guo3	"apple; CL:個|个[ge4],顆|颗[ke1]"
 平时	píng shí	ping2 shi2	in normal times; in peacetime
@@ -730,7 +730,7 @@
 森林	sēn lín	sen1 lin2	forest; CL:片[pian4]
 沙发	shā fā	sha1 fa1	"sofa; CL:條|条[tiao2],張|张[zhang1]"
 商店	shāng diàn	shang1 dian4	"store; shop; CL:家[jia1],個|个[ge4]"
-商量	shāng liang5	shang1 liang5	to consult; to talk over; to discuss
+商量	shāng liang	shang1 liang5	to consult; to talk over; to discuss
 伤心	shāng xīn	shang1 xin1	to grieve; broken-hearted
 上	shàng	shang4	on; on top; upon; first (of multiple parts); previous; last; upper; higher; above; to climb; to go into; to go up; to attend (class or university)
 上班	shàng bān	shang4 ban1	to go to work; to be on duty; to start work; to go to the office
@@ -878,7 +878,7 @@
 完成	wán chéng	wan2 cheng2	complete; accomplish; perfect tense (grammar)
 完全	wán quán	wan2 quan2	complete; whole; totally; entirely
 碗	wǎn	wan3	"bowl; cup; CL:隻|只[zhi1],個|个[ge4]"
-晚上	wǎn shang5	wan3 shang5	in the evening; CL:個|个[ge4]
+晚上	wǎn shang	wan3 shang5	in the evening; CL:個|个[ge4]
 万	wàn	wan4	ten thousand; a great number
 往	wǎng	wang3	to go (in a direction); to; towards; (of a train) bound for; past; previous
 往往	wǎng wǎng	wang3 wang3	often; frequently
@@ -898,7 +898,7 @@
 问	wèn	wen4	to ask
 问题	wèn tí	wen4 ti2	question; problem; issue; topic; CL:個|个[ge4]
 我	wǒ	wo3	I; me; my
-我们	wǒ men5	wo3 men5	we; us; ourselves; our
+我们	wǒ men	wo3 men5	we; us; ourselves; our
 握手	wò shǒu	wo4 shou3	to shake hands
 污染	wū rǎn	wu1 ran3	pollution; contamination; CL:個|个[ge4]
 无	wú	wu2	-less; not to have; no; none; not; to lack; un-
@@ -916,13 +916,13 @@
 洗手间	xǐ shǒu jiān	xi3 shou3 jian1	toilet; lavatory; washroom
 洗衣机	xǐ yī jī	xi3 yi1 ji1	washer; washing machine; CL:臺|台[tai2]
 洗澡	xǐ zǎo	xi3 zao3	to bathe; to take a shower
-喜欢	xǐ huan5	xi3 huan5	to like; to be fond of
+喜欢	xǐ huan	xi3 huan5	to like; to be fond of
 夏	xià	xia4	summer
 下	xià	xia4	down; downwards; below; lower; later; next (week etc); second (of two parts); to decline; to go down
 下午	xià wǔ	xia4 wu3	afternoon; p.m.; CL:個|个[ge4]
 下雨	xià yǔ	xia4 yu3	to rain; rainy
 先	xiān	xian1	early; prior; former; in advance; first
-先生	xiān sheng5	xian1 sheng5	"teacher; Mister (Mr.); husband; doctor (topolect); CL:個|个[ge4],位[wei4]"
+先生	xiān sheng	xian1 sheng5	"teacher; Mister (Mr.); husband; doctor (topolect); CL:個|个[ge4],位[wei4]"
 咸	xián	xian2	salted; salty; stingy; miserly
 现代	xiàn dài	xian4 dai4	modern times; modern age; modern era
 现在	xiàn zài	xian4 zai4	now; at present; at the moment; modern; current; nowadays
@@ -977,7 +977,7 @@
 需要	xū yào	xu1 yao4	to need; to want; to demand; needs; to require
 许多	xǔ duō	xu3 duo1	many; a lot of; much
 选择	xuǎn zé	xuan3 ze2	to select; to pick; choice; option; alternative
-学生	xué sheng5	xue2 sheng5	student; school child
+学生	xué sheng	xue2 sheng5	student; school child
 学习	xué xí	xue2 xi2	to learn; to study
 学校	xué xiào	xue2 xiao4	school; CL:所[suo3]
 雪	xuě	xue3	"snow; snowfall; CL:場|场[chang2]; to have the appearance of snow; to wipe away, off or out; to clean"
@@ -994,7 +994,7 @@
 演出	yǎn chū	yan3 chu1	"to act (in a play); to perform; to put on (a performance); performance; concert; show; CL:場|场[chang2],次[ci4]"
 演员	yǎn yuán	yan3 yuan2	"actor or actress; performer; CL:個|个[ge4],位[wei4],名[ming2]"
 眼镜	yǎn jìng	yan3 jing4	spectacles; eyeglasses; CL:副[fu4]
-眼睛	yǎn jing5	yan3 jing5	"eye; CL:隻|只[zhi1],雙|双[shuang1]"
+眼睛	yǎn jing	yan3 jing5	"eye; CL:隻|只[zhi1],雙|双[shuang1]"
 阳光	yáng guāng	yang2 guang1	sunshine; CL:線|线[xian4]
 羊肉	yáng ròu	yang2 rou4	mutton
 养成	yǎng chéng	yang3 cheng2	to cultivate; to raise; to form (a habit); to acquire
@@ -1015,7 +1015,7 @@
 医院	yī yuàn	yi1 yuan4	"hospital; CL:所[suo3],家[jia1],座[zuo4]"
 一定	yí dìng	yi2 ding4	surely; certainly; necessarily; fixed; a certain (extent etc); given; particular; must
 一共	yí gòng	yi2 gong4	altogether
-一会儿	yí huì r5	yi2 hui4 r5	a while
+一会儿	yí huì r	yi2 hui4 r5	a while
 一切	yí qiè	yi2 qie4	everything; every; all
 一样	yí yàng	yi2 yang4	same; like; equal to; the same as; just like
 以	yǐ	yi3	to use; according to; so as to; by means of; in order to; by; with; because
@@ -1061,7 +1061,7 @@
 友好	yǒu hǎo	you3 hao3	friendly (relations)
 友谊	yǒu yì	you3 yi4	companionship; fellowship; friendship
 又	yòu	you4	(once) again; also; both... and...; again
-右边	yòu bian5	you4 bian5	"right side; right, to the right"
+右边	yòu bian	you4 bian5	"right side; right, to the right"
 鱼	yú	yu2	"fish; CL:條|条[tiao2],尾[wei3]"
 愉快	yú kuài	yu2 kuai4	cheerful; cheerily; delightful; pleasant; pleasantly; pleasing; happy; delighted
 于是	yú shì	yu2 shi4	thereupon; as a result; consequently; thus; hence
@@ -1081,7 +1081,7 @@
 约会	yuē huì	yue1 hui4	"appointment; engagement; date; CL:次[ci4],個|个[ge4]"
 越	yuè	yue4	to exceed; to climb over; to surpass; the more... the more
 月	yuè	yue4	"moon; month; CL:個|个[ge4],輪|轮[lun2]"
-月亮	yuè liang5	yue4 liang5	moon
+月亮	yuè liang	yue4 liang5	moon
 阅读	yuè dú	yue4 du2	to read; reading
 云	yún	yun2	(classical) to say
 允许	yǔn xǔ	yun3 xu3	to permit; to allow
@@ -1090,10 +1090,10 @@
 在	zài	zai4	(located) at; (to be) in; to exist; in the middle of doing sth; (indicating an action in progress)
 再	zài	zai4	"again; once more; re-; second; another; then (after sth, and not until then)"
 再见	zài jiàn	zai4 jian4	goodbye; see you again later
-咱们	zán men5	zan2 men5	we or us (including both the speaker and the person(s) spoken to); I or me; you
+咱们	zán men	zan2 men5	we or us (including both the speaker and the person(s) spoken to); I or me; you
 暂时	zàn shí	zan4 shi2	temporary; provisional; for the time being
 脏	zàng	zang4	viscera; (anatomy) organ
-早上	zǎo shang5	zao3 shang5	early morning; CL:個|个[ge4]; Good morning!
+早上	zǎo shang	zao3 shang5	early morning; CL:個|个[ge4]; Good morning!
 责任	zé rèn	ze2 ren4	responsibility; blame; duty; CL:個|个[ge4]
 怎么	zěn me	zen3 me5	how?; what?; why?
 怎么样	zěn me yàng	zen3 me5 yang4	how?; how about?; how was it?; how are things?
@@ -1110,7 +1110,7 @@
 照片	zhào piàn	zhao4 pian4	"photo; photograph; picture; CL:張|张[zhang1],套[tao4],幅[fu2]"
 照相机	zhào xiàng jī	zhao4 xiang4 ji1	"camera; CL:個|个[ge4],架[jia4],部[bu4],台[tai2],隻|只[zhi1]"
 这	zhè	zhe4	"this; these; (commonly pr. zhei4 before a classifier, esp. in Beijing)"
-这儿	zhè r5	zhe4 r5	here
+这儿	zhè r	zhe4 r5	here
 着	zhe	zhe5	"particle attached after verb to indicate action in progress, like -ing ending"
 真	zhēn	zhen1	really; truly; indeed; real; true; genuine
 真正	zhēn zhèng	zhen1 zheng4	genuine; real; true; genuinely
@@ -1185,7 +1185,7 @@
 最近	zuì jìn	zui4 jin4	recent; recently; these days; latest; soon; nearest (of locations); shortest (of routes)
 尊重	zūn zhòng	zun1 zhong4	esteem; respect; to honor; to value sth
 昨天	zuó tiān	zuo2 tian1	yesterday
-左边	zuǒ bian5	zuo3 bian5	left; the left side; to the left of
+左边	zuǒ bian	zuo3 bian5	left; the left side; to the left of
 坐	zuò	zuo4	"to sit; to take a seat; to take (a bus, airplane etc); to bear fruit; surname Zuo"
 做	zuò	zuo4	to do; to make; to produce; to write; to compose; to act as; to engage in; to hold (a party); to be; to become; to function (in some capacity); to serve as; to be used for; to form (a bond or relationship); to pretend; to feign; to act a part; to put on appearance
 做生意	zuò shēng yì	zuo4 sheng1 yi4	to do business

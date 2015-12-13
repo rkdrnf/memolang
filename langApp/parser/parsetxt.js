@@ -18,7 +18,7 @@ fs.readFile('./hsk4.txt', 'utf-8', function (err, data) {
 		var columns = line.split('\t');
 		if (columns.length < 2) { return;}
 		var word = columns[0].trim();
-		var pinyin = columns[1].trim().split(';');
+		var pinyin = columns[1].trim().replace(/5/g, '').split(';')
 		var pronun = columns[2].trim().split(';');
 		var meaning = columns[3].trim().split(';');
 		
@@ -38,4 +38,6 @@ fs.readFile('./hsk4.txt', 'utf-8', function (err, data) {
 			});
 		});
 	})
+	
+	console.log('done');
 });
