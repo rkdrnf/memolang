@@ -8,14 +8,26 @@ $(function() {
 	$(document).on('click', '#quizBox #preference button#Ignore', OnClickIgnore);
 	$(document).on('click', '#quizBox #preference button#Add', OnClickAdd);	
 	$(document).on('change', '#quizBox #quizType select', OnChangeQuizType);
+	$(document).on('change', '#quizBox #preference input#ShowPinyin', OnChangePinyin);
 	
 	var wordsCount = 0;
 	var correctCount = 0;
 	var words = [];
 	var currentWord = null;
 	var quizType = "All";
+	var showPinyin = false;
 	
 	LoadWords();
+	
+	function OnChangePinyin() {
+		showPinyin = this.checked;
+		
+		if (showPinyin) {
+			$('#quizBox #pinyinBox').show();
+		} else {
+			$('#quizBox #pinyinBox').hide();
+		}
+	}
 	
 	function OnChangeQuizType() {
 		quizType = $(this).val();
@@ -130,15 +142,22 @@ $(function() {
 	function ShowMeaning() {
 		$('#quizBox #meaningBox').show();
 		$('#quizBox #answerBox').hide();
+		$('#quizBox #pinyinBox').show();
 	}
 	
 	function HideMeaning() {
 		$('#quizBox #meaningBox').hide();
 		$('#quizBox #answerBox').show();
+		if (!showPinyin) {
+			$('#quizBox #pinyinBox').hide();
+		}
 	}
 	
 	function ShowNextQuiz() {
 		HideMeaning();
+		if (showPinyin) {
+			$('#quizBox #pinyinBox').show();
+		}
 		
 		if (words.length == 0) {
 			ShowEnd();
@@ -146,6 +165,7 @@ $(function() {
 		}
 		currentWord = words.pop();
 		$('#quizBox #text').text(currentWord.text);
+		$('#quizBox #pinyinBox #pinyin').text(currentWord.pinyin);
 		$('#quizBox #meaning').text(currentWord.meaning);
 		$('#quizBox #desc').text(currentWord.desc);
 		
@@ -186,6 +206,7 @@ $(function() {
 		$('#quizBox #preference #Unwatch').hide();
 		$('#quizBox #preference #Ignore').hide();
 		$('#quizBox #preference #Add').hide();
+		$('#quizBox #pinyinBox').hide();
 		
 		wordsCount = 0;
 		correctCount = 0;

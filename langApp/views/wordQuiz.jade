@@ -8,6 +8,9 @@
 				option(value='Abandoned') 제외단어
 	
 		#preference.col-xs-7.text-right
+			label 발음
+				input#ShowPinyin.form-control(type='checkbox', value='pinyin') 
+					
 			button#Watch.btn.btn-link.btn-lg(aria-label='Watch')
 				span.glyphicon.glyphicon-heart-empty(aria-hidden='true')
 			button#Unwatch.btn.btn-link.btn-lg(aria-label='Unwatch')
@@ -19,6 +22,8 @@
 			
 	h1#text
 	
+	#pinyinBox
+		p#pinyin.lead
 	#meaningBox
 		p#meaning.lead
 		p#desc

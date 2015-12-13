@@ -3,7 +3,9 @@ extends ../layout
 block content
 	form(role='form', action='/words/deleteAll', method='post')
 		button.btn.btn-danger(type='submit') DeleteAll
-		
+	
+	
+	h1 Total #{words.length} Words
 	ul
 	each word in words
 		li
@@ -14,6 +16,10 @@ block content
 				span= word.text
 				br
 				span= word.meaning
+				br
+				span= word.pinyin
+				br
+				span= word.pronunciation
 				br
 				span= word.desc
 				br
