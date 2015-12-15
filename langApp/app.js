@@ -18,12 +18,24 @@ var session = require('express-session'),
     TwitterStrategy = require('passport-twitter'),
     GoogleStrategy = require('passport-google'),
     FacebookStrategy = require('passport-facebook');
+    
+var sassMiddleware = require('node-sass-middleware');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+
+//css engine setup
+app.use(
+  sassMiddleware({
+    src: __dirname + '/sass',
+    dest: __dirname + '/public/stylesheets',
+    prefix: '/stylesheets',
+    debug: true
+  })
+);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));

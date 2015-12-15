@@ -1,0 +1,39 @@
+.jumbotron
+{
+	text-align: center;
+	padding-top: 52px;
+}
+
+#quizBox #text
+{
+	font-size: 6em;
+	font-size: 20vw;
+}
+
+
+#quizBox #mainBox .row
+{
+	align-items: center;
+}
+
+#quizBox #mainBox .arrow
+{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#regWordBox, #editWordBox, #deleteWordBox
+{
+	align-items: center;
+	height: 100vh;
+}
+
+#regWordBox .row, #editWordBox .row, #deleteWordBox .row
+{
+	align-items: center;
+}
+
+@media (min-width: 320px) 
+{ 
+    div[class^="col"]{padding-left:5px; padding-right:5px;}
+}

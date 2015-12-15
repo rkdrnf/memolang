@@ -1,29 +1,26 @@
-.jumbotron
-{
-	text-align: center;
-	padding-top: 52px;
-}
+.jumbotron {
+  text-align: center;
+  padding-top: 52px; }
 
-#quizBox #text
-{
-	font-size: 6em;
-	font-size: 20vw;
-}
+#quizBox #text {
+  font-size: 6em;
+  font-size: 20vw; }
 
+#quizBox #mainBox .row {
+  align-items: center; }
 
+#quizBox #mainBox .arrow {
+  padding-left: 0px;
+  padding-right: 0px; }
 
-#quizBox #mainBox .row
-{
-	align-items: center;
-}
+#regWordBox, #editWordBox, #deleteWordBox {
+  align-items: center;
+  height: 100vh; }
 
-#regWordBox, #editWordBox, #deleteWordBox
-{
-	align-items: center;
-	height: 100vh;
-}
+#regWordBox .row, #editWordBox .row, #deleteWordBox .row {
+  align-items: center; }
 
-#regWordBox .row, #editWordBox .row, #deleteWordBox .row
-{
-	align-items: center;
-}
+@media (min-width: 200px) {
+  div[class*="col"] {
+    padding-left: 5px;
+    padding-right: 5px; } }
