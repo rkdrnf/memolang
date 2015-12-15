@@ -6,9 +6,13 @@ $(function() {
 	$(document).on('click', '#quizBox #preference button#Watch', OnClickWatch);
 	$(document).on('click', '#quizBox #preference button#Unwatch', OnClickUnwatch);
 	$(document).on('click', '#quizBox #preference button#Ignore', OnClickIgnore);
-	$(document).on('click', '#quizBox #preference button#Add', OnClickAdd);	
+	$(document).on('click', '#quizBox #preference button#Add', OnClickAdd);
+	$(document).on('click', '#quizBox #preference button#ShowPinyin', OnClickShowPinyin);
+	$(document).on('click', '#quizBox #preference button#HidePinyin', OnClickHidePinyin);
 	$(document).on('change', '#quizBox #quizType select', OnChangeQuizType);
-	$(document).on('change', '#quizBox #preference input#ShowPinyin', OnChangePinyin);
+	
+	$(document).on('click', '#quizBox #mainBox button#prevArrow', {dir: 'prev'}, OnClickArrow);
+	$(document).on('click', '#quizBox #mainBox button#nextArrow', {dir: 'next'}, OnClickArrow);
 	
 	var wordsCount = 0;
 	var correctCount = 0;
@@ -16,17 +20,41 @@ $(function() {
 	var currentWord = null;
 	var quizType = "All";
 	var showPinyin = false;
+	var currentIndex = 0;
 	
 	LoadWords();
 	
-	function OnChangePinyin() {
-		showPinyin = this.checked;
+	OnClickShowPinyin();
+	
+	function OnClickEditWord(e) {
+		e.preventDefault();
+	}
+	
+	function OnClickArrow(e) {
+		e.preventDefault();
 		
-		if (showPinyin) {
-			$('#quizBox #pinyinBox').show();
-		} else {
-			$('#quizBox #pinyinBox').hide();
+		if (e.data.dir === 'prev') {
+			ShowNextQuiz(Math.max(currentIndex - 1, 0));
+		} else { 
+			ShowNextQuiz(currentIndex + 1);
 		}
+	}
+	
+	function OnClickShowPinyin() {
+		showPinyin = true;
+		
+		$('#quizBox #pinyinBox').show();
+		$('#quizBox #preference #ShowPinyin').hide();
+		$('#quizBox #preference #HidePinyin').show();
+	}
+	
+	function OnClickHidePinyin() {
+		showPinyin = false;
+		
+		$('#quizBox #pinyinBox').hide();
+		$('#quizBox #preference #HidePinyin').hide();
+		$('#quizBox #preference #ShowPinyin').show();
+		
 	}
 	
 	function OnChangeQuizType() {
@@ -125,6 +153,8 @@ $(function() {
 			correctCount += 1;
 		}
 		
+		word.answered = true;
+		
 		$.ajax({
 			url: 'wordQuizAnswer',
 			type: 'POST',
@@ -153,21 +183,44 @@ $(function() {
 		}
 	}
 	
-	function ShowNextQuiz() {
-		HideMeaning();
+	function ShowNextQuiz(index) {
+		if (index === undefined) {
+			index = currentIndex + 1; 
+		}
+		
+		currentIndex = index;
+		
+		
 		if (showPinyin) {
 			$('#quizBox #pinyinBox').show();
 		}
 		
-		if (words.length == 0) {
+		HideMeaning();
+		
+		if (words.length === 0 || index === words.length) {
 			ShowEnd();
 			return;
 		}
-		currentWord = words.pop();
+				
+		currentWord = words[index];
 		$('#quizBox #text').text(currentWord.text);
-		$('#quizBox #pinyinBox #pinyin').text(currentWord.pinyin);
-		$('#quizBox #meaning').text(currentWord.meaning);
-		$('#quizBox #desc').text(currentWord.desc);
+		$('#quizBox #pinyinBox #pinyin').text(currentWord.pinyin.join(';'));
+		$('#quizBox #meaning').text(currentWord.meaning.join(';'));
+		$('#quizBox #desc').text(currentWord.desc.join(';'));
+		
+		$('#editWordBox #editWordForm #text').val(currentWord.text);
+		$('#editWordBox #editWordForm #pinyin').val(currentWord.pinyin.join(';'));
+		$('#editWordBox #editWordForm #pronunciation').val(currentWord.pronunciation.join(';'));
+		$('#editWordBox #editWordForm #meaning').val(currentWord.meaning.join(';'));
+		$('#editWordBox #editWordForm #desc').val(currentWord.desc.join(';'));
+		$('#editWordBox #editWordForm #wordID').val(currentWord._id);
+		
+		$('#deleteWordBox #deleteWordForm #wordID').val(currentWord._id);
+		
+		
+		if (currentWord.answered) {
+			ShowMeaning();
+		}
 		
 		if (currentWord.watching) ShowUnwatch();
 		else ShowWatch();
@@ -231,7 +284,7 @@ $(function() {
 			success: function(res) {
 				words = shuffle(res);
 				wordsCount = words.length;
-				ShowNextQuiz();
+				ShowNextQuiz(0);
 			}
 		});
 	}

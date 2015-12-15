@@ -7,10 +7,28 @@
 #quizBox #text
 {
 	font-size: 6em;
-	font-size: 22vw;
+	font-size: 20vw;
 }
 
-#regWordBox
+
+
+#quizBox #mainBox .row
 {
-	text-align: center;
+	display: flex;
+	align-items: center;
+}
+
+#regWordBox, #editWordBox, #deleteWordBox
+{
+	display: flex;
+	align-items: center;
+	height: 100vh;
+}
+
+#regWordBox .row, #editWordBox .row, #deleteWordBox .row
+{
+	margin: auto;
+	width: 100%;
+	display: flex;
+	align-items: center;
 }

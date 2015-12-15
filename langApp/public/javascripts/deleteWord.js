@@ -1,9 +1,11 @@
 $(function() {
-	var boxPath ='#regWordBox #regWordForm';
-	
+	var boxPath ='#deleteWordBox #deleteWordForm';
+		
 	$(document).on('click', boxPath + ' #submitButton', OnClickSubmit);
 	
+	
 	HideResultAll();
+	
 	
 	function HideResultAll() {
 		$(boxPath + ' .result-row span').hide();
@@ -31,32 +33,30 @@ $(function() {
 	}
 	
 	
-	
 	function OnClickSubmit(e) {
 		e.preventDefault();
 		
 		ShowLoading();
 		
-		var text = $('#regCharForm input#text').val();
-		var meaning = $('#regCharForm input#meaning').val();
-		var desc = $('#regCharForm input#desc').val();
+		var _id = $(boxPath + ' input#wordID').val();
 		
 		$.ajax({
-			url: '/words/register',
+			url: '/words/deleteAjax',
 			type: 'POST',
 			dataType: 'json',
-			data: {text: text, meaning: meaning, desc: desc},
+			data: {_id: _id},
 			error: function(e) {
 				ShowError();
 			},
 			success: function(res) {
 				if (res.error) {
 					ShowError(res);
-					console.log(res);
 				} else {
 					ShowOK();
 				}
+				
 			}
 		});
+		
 	}
 });

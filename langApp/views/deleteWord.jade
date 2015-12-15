@@ -1,0 +1,17 @@
+a(name='anchor_DeleteWord')
+#deleteWordBox
+	.row
+		.col-xs-offset-2.col-xs-8
+			form#deleteWordForm.center-block(role='form', action='/words/deleteAjax', method='post')
+				input#wordID(type='hidden', name='_id')
+				
+				.form-group.submit-row.text-center
+					button#submitButton.btn.btn-primary(type='submit') 삭제  
+				.form-group.result-row.text-center
+					span#loading.glyphicon.glyphicon-hourglass(aria-hidden='true')
+					span#ok.glyphicon.glyphicon-ok(aria-hidden='true')
+					span#error.glyphicon.glyphicon-alert(aria-hidden='true')
+					p#message
+		.col-xs-2.text-right
+			a.btn.btn-link.btn-lg(href='#top', aria-label='Top')
+				span.glyphicon.glyphicon-arrow-up(aria-hidden='true')

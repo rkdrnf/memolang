@@ -25,7 +25,7 @@ router.post('/delete', function(req, res, next) {
 	});	
 	
 	res.redirect('/words');
-})
+});
 
 router.post('/addWatch', function (req, res, next) {
 	res.setHeader('Content-Type', 'application/json');
@@ -39,14 +39,24 @@ router.post('/addWatch', function (req, res, next) {
 	
 	if (watch) {
 		Word.update({ _id: word }, { $addToSet: { watchings: req.user._id }}, function (err, count) {
+			if (err) {
+				res.send(JSON.stringify({ error: true, message: err }));
+				return;	
+			}  
+			
 			res.send(JSON.stringify({ success: true }));
 		})
 	} else {
 		Word.update({ _id: word }, { $pull: { watchings: req.user._id }}, function (err, count) {
+			if (err) {
+				res.send(JSON.stringify({ error: true, message: err }));
+				return;
+			}
+			
 			res.send(JSON.stringify({ success: true }));
 		});
 	}
-})
+});
 
 router.post('/ignore', function (req, res, next) {
 	res.setHeader('Content-Type', 'application/json');
@@ -59,34 +69,44 @@ router.post('/ignore', function (req, res, next) {
 	
 	if (ignore) {
 		Word.update({ _id: req.param('word') }, { $addToSet: { ignores: req.user._id }}, function(err) {
+			if (err) {
+				res.send(JSON.stringify({ error: true, message: err }));
+				return;	
+			}
+			  
 			res.send(JSON.stringify({ success: true }));
 		});
 	} else {
 		Word.update({ _id: req.param('word') }, { $pull: { ignores: req.user._id }}, function (err) {
+			if (err) {
+				res.send(JSON.stringify({ error: true, message: err }));
+				return;	
+			}  
+			
 			res.send(JSON.stringify({ success: true }));
 		});
 	}
-})
+});
 
 router.post('/register', function (req, res, next) {
 	res.setHeader('Content-Type', 'application/json');
 	
 	var text = req.param('text');
 	
-	//if text is pronounciation, convert to appropriate string
-	if (containsAlphabet(text)) {
-		res.send(JSON.stringify({ error: 'alphabet input' }));
-		return;
-	}
-	
 	Word.create({ text: text, meaning: req.param('meaning'), desc: req.param('desc')}, function(err, word) {
 		if (err) { 
-			res.send(JSON.stringify({ error: err }));
+			res.send(JSON.stringify({ error: true, message: err }));
 			return;
 		}
 		
+		var noError = true;
+		
 		GlobalWordLevel.create({ word: word._id, level: 1, triedNumber: 0, matchedNumber: 0 }, function(err, gWL) {
-			if (err) console.log('globalwordLevel creation failure');
+			if (err) {
+				noError = false;
+				res.send(JSON.stringify({ error: true, message: err }));
+				console.log('GlobalWordLevel Creation Failed');
+			}
 			
 			word.globalLevel = gWL._id;
 			word.save();
@@ -94,16 +114,72 @@ router.post('/register', function (req, res, next) {
 		
 		if (req.user) {
 			WordLevel.create({ owner: req.user._id, word: word._id, level: 1, triedNumber: 0, matchedNumber: 0 }, function(err, WL) {
-				if (err) console.log('wordLevel creation failure');
+				if (err) {
+					noError = false;
+					res.send(JSON.stringify({ error: true, message: err }));
+					console.log('WordLevel Creation Failed');
+				}
 				
-				Word.update({ _id: word._id }, { $addToSet: { level: WL._id }}, function(err) {}); 			
+				Word.update({ _id: word._id }, { $addToSet: { level: WL._id }}, function(err) {});
+				
+				if (noError) res.send(JSON.stringify({ success: true })); 
 			});
+		} else {
+			if (noError) res.send(JSON.stringify({ success: true }));
 		}
 	});
 	
-	res.send(JSON.stringify({ success: true}));
-	
 	return;
+});
+
+router.post('/update', function (req, res, next) {
+	res.setHeader('Content-Type', 'application/json');
+	
+	if (!req.user) {
+		res.send(JSON.stringify({ error: true, message: '로그인해주세요'}));
+		return;
+	}
+	
+	var text = req.param('text');
+	var pinyin = req.param('pinyin');
+	var pronun = req.param('pronunciation');
+	var meaning = req.param('meaning');
+	var desc = req.param('desc');
+	var _id = req.param('_id');
+	
+	Word.update({ _id: _id }, { text: text, pinyin: pinyin, pronun: pronun, meaning: meaning, desc: desc }, function (err, count) {
+		if (err) {
+			res.send(JSON.stringify({ error: true, message: err}));
+			console.log('Word Update Failed');
+		} else {
+			res.send(JSON.stringify({ success: true }));
+		}
+	});
+});
+
+router.post('/deleteAjax', function (req, res, next) {
+	res.setHeader('Content-Type', 'application/json');
+	
+	if (!req.user) {
+		res.send(JSON.stringify({ error: true, message: '로그인해주세요'}));
+		return;
+	}
+	
+	var _id = req.param('_id');
+	
+	Word.remove({ _id: _id }, function(err) {
+		if (err) res.send(JSON.stringify({ error: true, message: err }));
+	});
+	
+	WordLevel.remove({ word: _id }, function (err) {
+		if (err) res.send(JSON.stringify({ error: true, message: err }));
+	})
+	
+	GlobalWordLevel.remove({ word: _id }, function (err) {
+		if (err) res.send(JSON.stringify({ error: true, message: err }));
+	})
+	
+	res.send(JSON.stringify({ success: true }));
 });
 
 function containsNonLatinCodepoints(s) {

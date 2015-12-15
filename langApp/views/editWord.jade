@@ -1,27 +1,33 @@
-
-#regWordBox
+a(name='anchor_EditWord')
+#editWordBox
 	.row
 		.col-xs-offset-2.col-xs-8
-			form#regWordForm.center-block(role='form', action='/words/register', method='post')
+			form#editWordForm.center-block(role='form', action='/words/update', method='post')
 				.form-group
 					label(for='#text') 한자
 					input#text.form-control(type='text', name='text', placeholder='汉语, 한자 입력')
+				.form-group
+					label(for='#pinyin') 발음 기호
+					input#pinyin.form-control(type='text', name='pinyin', placeholder='발음 기호')
+				.form-group
+					label(for='#pronunciation') 발음 영문 기호
+					input#pronunciation.form-control(type='text', name='pronunciation', placeholder='발음 영문 표기')
 				.form-group
 					label(for='#meaning') 뜻
 					input#meaning.form-control(type='text', name='meaning', placeholder='뜻')
 				.form-group
 					label(for='#desc') 기타 설명
 					textarea#desc.form-control(type='text', name='desc', rows='4', placeholder='부가 설명')
+				input#wordID(type='hidden', name='_id')
+				
 				.form-group.submit-row.text-center
-					button#submitButton.btn.btn-primary(type='submit') 새 단어
+					button#submitButton.btn.btn-primary(type='submit') 수정
 				.form-group.result-row.text-center
 					span#loading.glyphicon.glyphicon-hourglass(aria-hidden='true')
 					span#ok.glyphicon.glyphicon-ok(aria-hidden='true')
 					span#error.glyphicon.glyphicon-alert(aria-hidden='true')
 					p#message
+					
 		.col-xs-2.text-right
 			a.btn.btn-link.btn-lg(href='#top', aria-label='Top')
 				span.glyphicon.glyphicon-arrow-up(aria-hidden='true')
-	
-
-	

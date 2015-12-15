@@ -6,11 +6,12 @@
 				option(value='My') 내 단어
 				option(value='Watching') 하트단어
 				option(value='Abandoned') 제외단어
-	
-		#preference.col-xs-7.text-right
-			label 발음
-				input#ShowPinyin.form-control(type='checkbox', value='pinyin') 
-					
+				
+		#preference.col-xs-7.text-right 
+			button#ShowPinyin.btn.btn-link.btn-lg(aria-label='Pinyin')
+				span.glyphicon.glyphicon-volume-up(aria-hidden='true')
+			button#HidePinyin.btn.btn-link.btn-lg(aria-label='Pinyin')
+				span.glyphicon.glyphicon-volume-off(aria-hidden='true')
 			button#Watch.btn.btn-link.btn-lg(aria-label='Watch')
 				span.glyphicon.glyphicon-heart-empty(aria-hidden='true')
 			button#Unwatch.btn.btn-link.btn-lg(aria-label='Unwatch')
@@ -19,11 +20,20 @@
 				span.glyphicon.glyphicon-trash(aria-hidden='true')
 			button#Add.btn.btn-link.btn-lg(aria-label='Add')
 				span.glyphicon.glyphicon-plus(aria-hidden='true')
-			
-	h1#text
 	
+	#mainBox
+		.row
+			#prevArrowBox.arrow-box.col-xs-1
+				button#prevArrow.arrow.btn.btn-link.btn-sm(aria-label='Prev')
+					span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+			.col-xs-10		
+				h1#text
+			#nextArrowBox.arrow-box.col-xs-1
+				button#nextArrow.arrow.btn.btn-link.btn-sm(aria-label='Next')
+					span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
 	#pinyinBox
 		p#pinyin.lead
+			
 	#meaningBox
 		p#meaning.lead
 		p#desc
@@ -39,3 +49,13 @@
 		p#answerRate
 		.row
 			button#restart.btn.btn-info.col-xs-offset-2.col-xs-8.input-lg(type='button') 새로 시작
+			
+	#optionBox
+		.row
+			.col-xs-12.text-right
+				a#EditWord.btn.btn-link.btn-lg(href='#anchor_EditWord', aria-label='Edit')
+					span.glyphicon.glyphicon-edit(aria-hidden='true')
+				a#DeleteWord.btn.btn-link.btn-lg(href='#anchor_DeleteWord', aria-label='Delete')
+					span.glyphicon.glyphicon-remove-circle(aria-hidden='true')
+					
+	
