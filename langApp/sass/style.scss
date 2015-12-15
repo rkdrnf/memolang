@@ -18,8 +18,8 @@
 
 #quizBox #mainBox .arrow
 {
-	padding-left: 5px;
-	padding-right: 5px;
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
 #regWordBox, #editWordBox, #deleteWordBox
@@ -33,7 +33,7 @@
 	align-items: center;
 }
 
-@media (min-width: 320px) 
+@media (min-width: 200px) 
 { 
-    div[class^="col"]{padding-left:5px; padding-right:5px;}
+    div[class*="col"]{padding-left:0px; padding-right:0px;}
 }
