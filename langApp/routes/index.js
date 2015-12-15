@@ -84,26 +84,33 @@ router.post('/wordQuizAnswer', function(req, res) {
 router.post('/loadQuiz', function(req, res) {
 	res.setHeader('Content-Type', 'application/json');
 	
+	var selectCount = 100;
+	
 	if (!req.user) {
-		Word.find({}).populate('globalLevel', null, null, { sort: { level: 'desc' }}).batchSize(100).lean().exec(function(err, words) {
-			res.send(JSON.stringify(words));
+		Word.find({}).count(function(err, count) {
+			Word.find({}).skip(Math.floor(Math.random() * (count - selectCount))).limit(selectCount).lean().exec(function(err, words) {
+				res.send(JSON.stringify(words));
+			});
 		});
+		
 		return;
 	}
 	
 	var quizType = req.param('quizType');
 	
 	if (quizType === 'All') {
-		Word.find({ ignores: { $ne: req.user._id }}).populate('globalLevel', null, null, { sort: { level: 'desc' }}).batchSize(100).lean().exec(function(err, words) {
-			words.forEach(function(word) {
-				word.watching = word.watchings.find(function (wat) {
-					return wat.id == req.user._id.id;
-				}) !== undefined;
-				word.ignoring = word.ignores.find(function (ign) {
-					return ign.id == req.user._id.id;
-				}) !== undefined;
-			})
-			res.send(JSON.stringify(words));
+		Word.find({ ignores: { $ne: req.user._id }}).count(function(err, count) {
+			Word.find({ ignores: { $ne: req.user._id }}).skip(Math.floor(Math.random() * (count - selectCount))).limit(selectCount).lean().exec(function(err, words) {
+				words.forEach(function(word) {
+					word.watching = word.watchings.find(function (wat) {
+						return wat.id == req.user._id.id;
+					}) !== undefined;
+					word.ignoring = word.ignores.find(function (ign) {
+						return ign.id == req.user._id.id;
+					}) !== undefined;
+				})
+				res.send(JSON.stringify(words));
+			});
 		});
 		return;
 	}
@@ -133,18 +140,21 @@ router.post('/loadQuiz', function(req, res) {
 		});
 		return;
 	}
-		
-	Word.find({'ignores': { $ne: req.user._id }}).populate('level', null, { owner: req.user._id }).lean().exec(function (err, words) {
-		words.forEach(function(word) {
-				word.watching = word.watchings.find(function (wat) {
-					return wat.id == req.user._id.id;
-				}) !== undefined;
-				word.ignoring = word.ignores.find(function (ign) {
-					return ign.id == req.user._id.id;
-				}) !== undefined;
-		})
-		res.send(JSON.stringify(words));
-		return;
+	
+	Word.find({'ignores': { $ne: req.user._id }}).populate('level', null, { owner: req.user._id }).count(function(err, count) {	
+		Word.find({'ignores': { $ne: req.user._id }}).populate('level', null, { owner: req.user._id })
+		.skip(Math.floor(Math.random() * (count - selectCount))).limit(selectCount).lean().exec(function (err, words) {
+			words.forEach(function(word) {
+					word.watching = word.watchings.find(function (wat) {
+						return wat.id == req.user._id.id;
+					}) !== undefined;
+					word.ignoring = word.ignores.find(function (ign) {
+						return ign.id == req.user._id.id;
+					}) !== undefined;
+			})
+			res.send(JSON.stringify(words));
+			return;
+		});
 	});
 });
 
