@@ -14,12 +14,14 @@
 
 #quizBox #mainBox .row
 {
+	display:-webkit-flex;
 	display: flex;
 	align-items: center;
 }
 
 #regWordBox, #editWordBox, #deleteWordBox
 {
+	display:-webkit-flex;
 	display: flex;
 	align-items: center;
 	height: 100vh;
@@ -29,6 +31,7 @@
 {
 	margin: auto;
 	width: 100%;
+	display:-webkit-flex;
 	display: flex;
 	align-items: center;
 }
