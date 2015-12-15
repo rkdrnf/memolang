@@ -25,7 +25,5 @@
 
 #regWordBox .row, #editWordBox .row, #deleteWordBox .row
 {
-	margin: auto;
-	width: 100%;
 	align-items: center;
 }
