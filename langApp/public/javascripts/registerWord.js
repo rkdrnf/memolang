@@ -38,7 +38,7 @@ $(function() {
 		ShowLoading();
 		
 		var text = $('#regCharForm input#text').val();
-		var meaning = $('#regCharForm input#meaning').val();
+		var meaning = $('#regCharForm textarea#meaning').val();
 		var desc = $('#regCharForm textarea#desc').val();
 		
 		$.ajax({

@@ -1,14 +1,15 @@
 
 #regWordBox
 	.row
-		.col-xs-offset-2.col-xs-8
+		.col-xs-1
+		.col-xs-10
 			form#regWordForm.center-block(role='form', action='/words/register', method='post')
 				.form-group
 					label(for='#text') 한자
 					input#text.form-control(type='text', name='text', placeholder='汉语, 한자 입력')
 				.form-group
 					label(for='#meaning') 뜻
-					input#meaning.form-control(type='text', name='meaning', placeholder='뜻')
+					textarea#meaning.form-control(type='text', name='meaning', rows='2' placeholder='뜻')
 				.form-group
 					label(for='#desc') 기타 설명
 					textarea#desc.form-control(type='text', name='desc', rows='4', placeholder='부가 설명')
@@ -19,8 +20,8 @@
 					span#ok.glyphicon.glyphicon-ok(aria-hidden='true')
 					span#error.glyphicon.glyphicon-alert(aria-hidden='true')
 					p#message
-		.col-xs-2.text-right
-			a.btn.btn-link.btn-lg(href='#top', aria-label='Top')
+		.col-xs-1.text-right
+			a#topLink.btn.btn-link.btn-lg(href='#top', aria-label='Top')
 				span.glyphicon.glyphicon-arrow-up(aria-hidden='true')
 	
 

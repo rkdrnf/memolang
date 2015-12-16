@@ -41,7 +41,7 @@ $(function() {
 		var text = $(boxPath + ' input#text').val();
 		var pinyin = $(boxPath + ' input#pinyin').val();
 		var pronunciation = $(boxPath + ' input#pronunciation').val();
-		var meaning = $(boxPath + ' input#meaning').val();
+		var meaning = $(boxPath + ' textarea#meaning').val();
 		var desc = $(boxPath + ' textarea#desc').val();
 		var _id = $(boxPath + ' input#wordID').val();
 		

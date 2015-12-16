@@ -1,7 +1,7 @@
 a(name='anchor_EditWord')
 #editWordBox
 	.row
-		.col-xs-offset-2.col-xs-8
+		.col-xs-offset-1.col-xs-10
 			form#editWordForm.center-block(role='form', action='/words/update', method='post')
 				.form-group
 					label(for='#text') 한자
@@ -14,7 +14,7 @@ a(name='anchor_EditWord')
 					input#pronunciation.form-control(type='text', name='pronunciation', placeholder='발음 영문 표기')
 				.form-group
 					label(for='#meaning') 뜻
-					input#meaning.form-control(type='text', name='meaning', placeholder='뜻')
+					textarea#meaning.form-control(type='text', name='meaning', rows='2', placeholder='뜻')
 				.form-group
 					label(for='#desc') 기타 설명
 					textarea#desc.form-control(type='text', name='desc', rows='4', placeholder='부가 설명')
@@ -28,6 +28,6 @@ a(name='anchor_EditWord')
 					span#error.glyphicon.glyphicon-alert(aria-hidden='true')
 					p#message
 					
-		.col-xs-2.text-right
-			a.btn.btn-link.btn-lg(href='#top', aria-label='Top')
+		.col-xs-1.text-right
+			a#topLink.btn.btn-link.btn-lg(href='#top', aria-label='Top')
 				span.glyphicon.glyphicon-arrow-up(aria-hidden='true')

@@ -47,31 +47,28 @@
 #regWordBox, #editWordBox, #deleteWordBox
 {
 	height: 100vh;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
 	
-	display: flex;
 	
-	-webkit-box-align: center;
-	-webkit-flex-align: center;
-	-ms-flex-align: center;
-	-webkit-align-items: center;
-	align-items: center;	
 	
 	.row {
-		margin: auto;
+		height: 100%;
 		display: -webkit-box;
 		display: -webkit-flex;
 		display: -ms-flexbox;
 		
 		display: flex;
+		flex-flow: row;
 		
 		-webkit-box-align: center;
 		-webkit-flex-align: center;
 		-ms-flex-align: center;
 		-webkit-align-items: center;
 		align-items: center;	
+		
+		#topLink {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
 	}
 }
 

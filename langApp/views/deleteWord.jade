@@ -1,7 +1,7 @@
 a(name='anchor_DeleteWord')
 #deleteWordBox
 	.row
-		.col-xs-offset-2.col-xs-8
+		.col-xs-offset-1.col-xs-10
 			form#deleteWordForm.center-block(role='form', action='/words/deleteAjax', method='post')
 				input#wordID(type='hidden', name='_id')
 				
@@ -12,6 +12,6 @@ a(name='anchor_DeleteWord')
 					span#ok.glyphicon.glyphicon-ok(aria-hidden='true')
 					span#error.glyphicon.glyphicon-alert(aria-hidden='true')
 					p#message
-		.col-xs-2.text-right
-			a.btn.btn-link.btn-lg(href='#top', aria-label='Top')
+		.col-xs-1.text-right
+			a#topLink.btn.btn-link.btn-lg(href='#top', aria-label='Top')
 				span.glyphicon.glyphicon-arrow-up(aria-hidden='true')
