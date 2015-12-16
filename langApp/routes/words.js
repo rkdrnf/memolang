@@ -92,8 +92,17 @@ router.post('/register', function (req, res, next) {
 	res.setHeader('Content-Type', 'application/json');
 	
 	var text = req.param('text');
+	var meanings = req.param('meaning').trim.split(';');
+	meanings.forEach(function(meaning) {
+		meaning = meaning.trim()
+	}); 
 	
-	Word.create({ text: text, meaning: req.param('meaning'), desc: req.param('desc')}, function(err, word) {
+	var descs = req.param('desc').trim.split('\n');
+	descs.forEach(function(desc) {
+		desc = desc.trim();
+	});
+	
+	Word.create({ text: text, meaning: meanings, desc: descs}, function(err, word) {
 		if (err) { 
 			res.send(JSON.stringify({ error: true, message: err }));
 			return;
@@ -140,14 +149,26 @@ router.post('/update', function (req, res, next) {
 		return;
 	}
 	
-	var text = req.param('text');
-	var pinyin = req.param('pinyin');
-	var pronun = req.param('pronunciation');
-	var meaning = req.param('meaning');
-	var desc = req.param('desc');
+	var text = req.param('text').trim();
+	var pinyins = req.param('pinyin').trim().split(';');
+	pinyins.forEach(function(pinyin) {
+		pinyin = pinyin.trim();
+	});
+	var pronuns = req.param('pronunciation').trim().split(';');
+	pronuns.forEach(function(pronun) {
+		pronun = pronun.trim();
+	});
+	var meanings = req.param('meaning').trim().split(';');
+	meanings.forEach(function(meaning) {
+		meaning = meaning.trim();
+	});
+	var descs = req.param('desc').trim().split('\n');
+	descs.forEach(function(desc) {
+		desc = desc.trim();
+	});
 	var _id = req.param('_id');
 	
-	Word.update({ _id: _id }, { text: text, pinyin: pinyin, pronun: pronun, meaning: meaning, desc: desc }, function (err, count) {
+	Word.update({ _id: _id }, { text: text, pinyin: pinyins, pronun: pronuns, meaning: meanings, desc: descs }, function (err, count) {
 		if (err) {
 			res.send(JSON.stringify({ error: true, message: err}));
 			console.log('Word Update Failed');

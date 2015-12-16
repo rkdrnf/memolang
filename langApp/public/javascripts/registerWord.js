@@ -39,7 +39,7 @@ $(function() {
 		
 		var text = $('#regCharForm input#text').val();
 		var meaning = $('#regCharForm input#meaning').val();
-		var desc = $('#regCharForm input#desc').val();
+		var desc = $('#regCharForm textarea#desc').val();
 		
 		$.ajax({
 			url: '/words/register',

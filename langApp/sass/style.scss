@@ -1,36 +1,58 @@
+#topNav
+{
+	margin-bottom: 0;
+}
+
 .jumbotron
 {
 	text-align: center;
-	padding-top: 52px;
+	padding-top: 0px;
+	padding-bottom: 10px;
 }
 
-#quizBox #text
+#quizBox 
 {
-	font-size: 6em;
-	font-size: 20vw;
+	#text
+	{
+		font-size: 6em;
+		font-size: 20vw;
+	}
+	
+	#mainBox .row
+	{
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		
+		display: flex;
+		
+		align-items: center;
+		
+		.arrow {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+	}
+	
+	#optionBox {
+		margin-top: 20px;
+	}
 }
 
-
-#quizBox #mainBox .row
-{
-	align-items: center;
-}
-
-#quizBox #mainBox .arrow
-{
-	padding-left: 0px;
-	padding-right: 0px;
-}
 
 #regWordBox, #editWordBox, #deleteWordBox
 {
-	align-items: center;
 	height: 100vh;
-}
-
-#regWordBox .row, #editWordBox .row, #deleteWordBox .row
-{
-	align-items: center;
+	
+	.row {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		
+		display: flex;
+		
+		align-items: center;	
+	}
 }
 
 @media (min-width: 200px) 

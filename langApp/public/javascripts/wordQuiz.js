@@ -206,7 +206,12 @@ $(function() {
 		$('#quizBox #text').text(currentWord.text);
 		$('#quizBox #pinyinBox #pinyin').text(currentWord.pinyin.join(';'));
 		$('#quizBox #meaning').text(currentWord.meaning.join(';'));
-		$('#quizBox #desc').text(currentWord.desc.join(';'));
+		var descs = currentWord.desc;
+		descs.forEach(function(desc) {
+			desc = desc.trim().replace(/>/, '&gt;').replace(/</, '&lt;');
+		});
+		
+		$('#quizBox #desc').html(descs.join('<br />'));
 		
 		$('#editWordBox #editWordForm #text').val(currentWord.text);
 		$('#editWordBox #editWordForm #pinyin').val(currentWord.pinyin.join(';'));

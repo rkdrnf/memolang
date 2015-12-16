@@ -1,24 +1,36 @@
+#topNav {
+  margin-bottom: 0; }
+
 .jumbotron {
   text-align: center;
-  padding-top: 52px; }
+  padding-top: 0px;
+  padding-bottom: 10px; }
 
 #quizBox #text {
   font-size: 6em;
   font-size: 20vw; }
 
 #quizBox #mainBox .row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   align-items: center; }
+  #quizBox #mainBox .row .arrow {
+    padding-left: 0px;
+    padding-right: 0px; }
 
-#quizBox #mainBox .arrow {
-  padding-left: 0px;
-  padding-right: 0px; }
+#quizBox #optionBox {
+  margin-top: 20px; }
 
 #regWordBox, #editWordBox, #deleteWordBox {
-  align-items: center;
   height: 100vh; }
-
-#regWordBox .row, #editWordBox .row, #deleteWordBox .row {
-  align-items: center; }
+  #regWordBox .row, #editWordBox .row, #deleteWordBox .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center; }
 
 @media (min-width: 200px) {
   div[class*="col"] {
