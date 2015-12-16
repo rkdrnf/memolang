@@ -26,6 +26,10 @@
 		
 		display: flex;
 		
+		-webkit-box-align: center;
+		-webkit-flex-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
 		align-items: center;
 		
 		.arrow {
@@ -43,14 +47,30 @@
 #regWordBox, #editWordBox, #deleteWordBox
 {
 	height: 100vh;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	
+	display: flex;
+	
+	-webkit-box-align: center;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;	
 	
 	.row {
+		margin: auto;
 		display: -webkit-box;
 		display: -webkit-flex;
 		display: -ms-flexbox;
 		
 		display: flex;
 		
+		-webkit-box-align: center;
+		-webkit-flex-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
 		align-items: center;	
 	}
 }
