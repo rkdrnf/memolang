@@ -1,6 +1,12 @@
 #topNav {
   margin-bottom: 0; }
 
+ul.noindent {
+  margin-left: 5px;
+  margin-right: 0px;
+  padding-left: 10px;
+  padding-right: 0px; }
+
 .jumbotron {
   text-align: center;
   padding-top: 0px;
@@ -44,6 +50,22 @@
     #regWordBox .row #topLink, #editWordBox .row #topLink, #deleteWordBox .row #topLink {
       padding-left: 0px;
       padding-right: 0px; }
+
+#helpBox .row {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-flow: row;
+  -webkit-box-align: center;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center; }
+  #helpBox .row #topLink {
+    padding-left: 0px;
+    padding-right: 0px; }
 
 @media (min-width: 200px) {
   div[class*="col"] {

@@ -8,7 +8,7 @@ block append head
 	
 block content
 	a(name='Top')
-	nav#topNav.navbar.navbar-inverse.navbar-static-top
+	nav#topNav.navbar.navbar-default.navbar-static-top
 		.container
 			.navbar-header
 				button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false')
@@ -17,6 +17,10 @@ block content
 					span.icon-bar
 					span.icon-bar
 				span.navbar-brand MemoLang
+				a#help.btn.btn-link(href='#anchor_Help', aria-label='Help'). 
+					#[span.glyphicon.glyphicon-question-sign(aria-hidden='true')] 도움말
+					
+				
 				
 			#navbar.navbar-collapse.collapse
 				if (!user)
@@ -51,3 +55,6 @@ block content
 		
 	.container
 		include deleteWord.jade
+		
+	.container
+		include help.jade

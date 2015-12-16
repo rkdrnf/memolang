@@ -9,10 +9,10 @@
 					input#text.form-control(type='text', name='text', placeholder='汉语, 한자 입력')
 				.form-group
 					label(for='#meaning') 뜻
-					textarea#meaning.form-control(type='text', name='meaning', rows='2' placeholder='뜻')
+					textarea#meaning.form-control(type='text', name='meaning', rows='2' placeholder='뜻. 복수는 ;로 구분')
 				.form-group
 					label(for='#desc') 기타 설명
-					textarea#desc.form-control(type='text', name='desc', rows='4', placeholder='부가 설명')
+					textarea#desc.form-control(type='text', name='desc', rows='4', placeholder='부가 설명. 복수는 엔터로 구분')
 				.form-group.submit-row.text-center
 					button#submitButton.btn.btn-primary(type='submit') 새 단어
 				.form-group.result-row.text-center

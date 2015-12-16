@@ -1,0 +1,40 @@
+a(name='anchor_Help')
+#helpBox
+	.row
+		.col-xs-offset-1.col-xs-10
+			h2 도움말
+			ul.noindent
+				li 단어칸 왼쪽 위의 선택 메뉴로 나오는 단어들을 선택할 수 있습니다.
+					ul.noindent
+						li 모든 단어: 등록된 모든 단어를 무작위로 100개 보여줍니다.
+						li 내 단어: 내가 '알아요' 혹은 '몰라요'를 한번이라도 선택한 적 있는 단어를 100개 보여줍니다.
+						li 하트 단어: 내가 #[span.glyphicon.glyphicon-heart-empty]로 등록한 단어를 모두 보여줍니다.
+						li 제외 단어: 내가 #[span.glyphicon.glyphicon-trash]로 제외한 단어를 모두 보여줍니다.
+						li - 로그인 시, 모든 단어와 내 단어에서 제외단어가 보이지 않습니다.
+						li - 하트 단어 에서는 제외된 단어도 하트 단어로 등록되었을 경우 보입니다.
+						li - 내 단어, 하트 단어, 제외 단어는 로그인 시에만 사용할 수 있습니다.
+				li 아이콘 설명
+					ul.noindent
+						li #[span.glyphicon.glyphicon-volume-up]: 누르면 발음 기호를 표시합니다.
+						li #[span.glyphicon.glyphicon-volume-off]: 누르면 발음 기호를 표시하지 않습니다.
+						li #[span.glyphicon.glyphicon-heart-empty]: 누르면 하트 단어에 등록합니다.
+						li #[span.glyphicon.glyphicon-heart]: 누르면 하트 단어에서 해제합니다.
+						li #[span.glyphicon.glyphicon-trash]: 누르면 제외 단어에 등록합니다.
+						li #[span.glyphicon.glyphicon-plus]: 누르면 제외 단어에서 해제합니다.
+						li #[span.glyphicon.glyphicon-chevron-left]: 이전 단어로 이동합니다.
+						li #[span.glyphicon.glyphicon-chevron-right]: 다음 단어로 이동합니다.
+						li #[span.glyphicon.glyphicon-edit]: 해당 단어 수정 메뉴로 이동합니다. (전체에게 적용됨)
+						li #[span.glyphicon.glyphicon-remove-circle]: 해당 단어 삭제  메뉴로 이동합니다. (전체에게 적용됨)
+				
+				li 동작 설명
+					ul.noindent
+						li 
+							p. 
+								알아요, 몰라요: 두 버튼 모두 단어의 발음과 뜻을 보여줍니다. 
+								원래는 몰라요 많이 누른 단어를 자주 보여줄 예정이었지만 아직 구현 안됨..
+	
+				
+					
+		.col-xs-1.text-right
+			a#topLink.btn.btn-link.btn-lg(href='#top', aria-label='Top')
+				span.glyphicon.glyphicon-arrow-up(aria-hidden='true')

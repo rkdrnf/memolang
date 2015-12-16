@@ -8,16 +8,16 @@ a(name='anchor_EditWord')
 					input#text.form-control(type='text', name='text', placeholder='汉语, 한자 입력')
 				.form-group
 					label(for='#pinyin') 발음 기호
-					input#pinyin.form-control(type='text', name='pinyin', placeholder='발음 기호')
+					input#pinyin.form-control(type='text', name='pinyin', placeholder='발음 기호. 복수는 ;로 구분')
 				.form-group
 					label(for='#pronunciation') 발음 영문 기호
-					input#pronunciation.form-control(type='text', name='pronunciation', placeholder='발음 영문 표기')
+					input#pronunciation.form-control(type='text', name='pronunciation', placeholder='발음 영문 표기. 복수는 ;로 구분')
 				.form-group
 					label(for='#meaning') 뜻
-					textarea#meaning.form-control(type='text', name='meaning', rows='2', placeholder='뜻')
+					textarea#meaning.form-control(type='text', name='meaning', rows='2', placeholder='뜻. 복수는 ;로 구분')
 				.form-group
 					label(for='#desc') 기타 설명
-					textarea#desc.form-control(type='text', name='desc', rows='4', placeholder='부가 설명')
+					textarea#desc.form-control(type='text', name='desc', rows='4', placeholder='부가 설명. 복수는 엔터로 구분 ')
 				input#wordID(type='hidden', name='_id')
 				
 				.form-group.submit-row.text-center
