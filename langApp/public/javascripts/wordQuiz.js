@@ -14,6 +14,8 @@ $(function() {
 	$(document).on('click', '#quizBox #mainBox button#prevArrow', {dir: 'prev'}, OnClickArrow);
 	$(document).on('click', '#quizBox #mainBox button#nextArrow', {dir: 'next'}, OnClickArrow);
 	
+	$(document).on('click', '#quizBox #searchBox button#search', OnClickSearch);
+	
 	var wordsCount = 0;
 	var correctCount = 0;
 	var words = [];
@@ -25,6 +27,49 @@ $(function() {
 	LoadWords();
 	
 	OnClickShowPinyin();
+	
+	function OnClickSearch(e) {
+		e.preventDefault();
+		var searchType = $('#quizBox #searchBox input[name=searchOption]:checked').val();
+		var searchText = $('#quizBox #searchBox #searchText').val();
+		
+		HideEnd();
+		
+		$.ajax({
+			url: '/words/search',
+			type: 'POST',
+			dataType: 'json',
+			data: { type: searchType, text: searchText },
+			error: function (err) {
+				console.log('search failed');
+			},
+			success: function (res) {
+				if (res.error) {
+					console.log('search failed:' + res.message.errmsg);
+					return;
+				}
+				
+				$('#quizBox #searchBox #searchResult').text(res.length + '개 검색되었습니다.'); 
+				
+				if (searchType === 'text') {
+					res.sort(function(a,b) {
+						if (a.text.length < b.text.length) {
+							return -1;
+						} else if (a.text.length === b.text.length) {
+							if (a.indexOf(searchText) < b.indexOf(searchText)) return -1;
+							else if (a.indexOf(searchText) === b.indexOf(searchText)) return 0;
+							else if (a.indexOf(searchText) === b.indexOf(searchText)) return 1;
+						} else {
+							return 1;
+						}
+					});
+				}
+				
+				ShowWords(res);
+			}
+		})
+		
+	}
 	
 	function OnClickEditWord(e) {
 		e.preventDefault();
@@ -272,11 +317,10 @@ $(function() {
 	
 	function HideEnd() {
 		var hideBox = $('#quizBox #endBox');
-		console.log(hideBox);
 		hideBox.hide();
 	}
 
-	function LoadWords() {
+	function LoadWords(words) {
 		HideEnd();
 		$.ajax({
 			url: 'loadQuiz', 
@@ -287,11 +331,16 @@ $(function() {
 				console.log('failed to receive words');
 			},
 			success: function(res) {
-				words = shuffle(res);
-				wordsCount = words.length;
-				ShowNextQuiz(0);
+				var newWords = shuffle(res);
+				ShowWords(newWords);
 			}
 		});
+	}
+	
+	function ShowWords(newWords) {
+		words = newWords;
+		wordsCount = words.length;
+		ShowNextQuiz(0);
 	}
 	
 	function shuffle(array) {

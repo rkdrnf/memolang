@@ -58,4 +58,25 @@
 				a#DeleteWord.btn.btn-link.btn-lg(href='#anchor_DeleteWord', aria-label='Delete')
 					span.glyphicon.glyphicon-remove-circle(aria-hidden='true')
 					
+	#searchBox
+		.row
+			.col-xs-12
+				form.form-inline
+					.form-group
+						.input-group
+							span.input-group-addon
+								label 한자
+									input(type='radio', name="searchOption" value="text", checked='true')
+								label 뜻
+									input(type='radio', name="searchOption" value="meaning")
+							input#searchText.form-control(type='text', name="searchText")
+							span.input-group-btn
+								button#search.btn.btn-default(type="submit", aria-label='Search')
+									span.glyphicon.glyphicon-search(aria-hidden='true')
+		.row
+			.col-xs-12
+				span#searchResult
+										
+			
+					
 	

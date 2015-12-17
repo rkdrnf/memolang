@@ -211,5 +211,35 @@ function containsAlphabet(s) {
 	return /[a-zA-Z0-9]/.test(s)
 }
 
+router.post('/search', function (req, res, next) {
+	res.setHeader('Content-Type', 'application/json');
+	
+	var type = req.param('type');
+	var text = req.param('text');
+	//sort in client
+	var re = new RegExp(text, "gi");
+	
+	if (type === 'text') {
+		Word.find({ text: re }).lean().exec(function(err, words) {
+			if (err) {
+				res.send(JSON.stringify({ error: true, message: err }));
+				return;
+			} 
+			
+			res.send(JSON.stringify(words));
+		});
+	} else if (type === 'meaning') {
+		Word.find({ meaning: re }).lean().exec(function(err, words) {
+			if (err) {
+				res.send(JSON.stringify({ error: true, message: err }));
+				return;
+			} 
+			
+			res.send(JSON.stringify(words));
+		});
+	}
+	
+});
+
 module.exports = router;
 
