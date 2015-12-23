@@ -56,9 +56,9 @@ $(function() {
 						if (a.text.length < b.text.length) {
 							return -1;
 						} else if (a.text.length === b.text.length) {
-							if (a.indexOf(searchText) < b.indexOf(searchText)) return -1;
-							else if (a.indexOf(searchText) === b.indexOf(searchText)) return 0;
-							else if (a.indexOf(searchText) === b.indexOf(searchText)) return 1;
+							if (a.text.indexOf(searchText) < b.text.indexOf(searchText)) { return -1; }
+							else if (a.text.indexOf(searchText) === b.text.indexOf(searchText)) { return 0; }
+							else if (a.text.indexOf(searchText) > b.text.indexOf(searchText)) { return 1; }
 						} else {
 							return 1;
 						}
@@ -81,7 +81,7 @@ $(function() {
 		if (e.data.dir === 'prev') {
 			ShowNextQuiz(Math.max(currentIndex - 1, 0));
 		} else { 
-			ShowNextQuiz(currentIndex + 1);
+			ShowNextQuiz(Math.min(words.length, currentIndex + 1));
 		}
 	}
 	
@@ -233,6 +233,10 @@ $(function() {
 			index = currentIndex + 1; 
 		}
 		
+		if (index > words.length) {
+			index = words.length;
+		}
+		
 		currentIndex = index;
 		
 		
@@ -245,6 +249,8 @@ $(function() {
 		if (words.length === 0 || index === words.length) {
 			ShowEnd();
 			return;
+		} else {
+			HideEnd();
 		}
 				
 		currentWord = words[index];
