@@ -92,12 +92,15 @@ router.post('/register', function (req, res, next) {
 	res.setHeader('Content-Type', 'application/json');
 	
 	var text = req.param('text');
-	var meanings = req.param('meaning').trim.split(';');
+	var meanings = req.param('meaning').trim().split(';');
 	meanings.forEach(function(meaning) {
-		meaning = meaning.trim()
+		meaning = meaning.trim();
 	}); 
+	meanings = meanings.filter(function(meaning) {
+		return meaning.length > 0;
+	});
 	
-	var descs = req.param('desc').trim.split('\n');
+	var descs = req.param('desc').trim().split('\n');
 	descs.forEach(function(desc) {
 		desc = desc.trim();
 	});
@@ -162,6 +165,10 @@ router.post('/update', function (req, res, next) {
 	meanings.forEach(function(meaning) {
 		meaning = meaning.trim();
 	});
+	meanings = meanings.filter(function(meaning) {
+		return meaning.length > 0;
+	});
+	
 	var descs = req.param('desc').trim().split('\n');
 	descs.forEach(function(desc) {
 		desc = desc.trim();

@@ -37,9 +37,9 @@ $(function() {
 		
 		ShowLoading();
 		
-		var text = $('#regCharForm input#text').val();
-		var meaning = $('#regCharForm textarea#meaning').val();
-		var desc = $('#regCharForm textarea#desc').val();
+		var text = $('#regWordForm input#text').val();
+		var meaning = $('#regWordForm textarea#meaning').val();
+		var desc = $('#regWordForm textarea#desc').val();
 		
 		$.ajax({
 			url: '/words/register',
